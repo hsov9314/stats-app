@@ -24,8 +24,8 @@ jobs:
 
     - name: install and build
       run: |
-        npm ci
-        npm run build
+        yarn install --frozen-lockfile
+        yarn vite:build
       env:
         CI: true
 
