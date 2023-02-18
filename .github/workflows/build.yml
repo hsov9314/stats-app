@@ -24,6 +24,7 @@ jobs:
 
     - name: install and build
       run: |
+        cd ./app
         yarn install --frozen-lockfile
         yarn vite:build
       env:
@@ -34,4 +35,4 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./build
+        PUBLISH_DIR: ./app/build
