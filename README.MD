@@ -1,1 +1,1 @@
-React TypeScript Tailwind
+Template of React + TypeScript + Tailwind + Eslint
