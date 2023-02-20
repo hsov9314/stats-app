@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build-ghp": "tsc && vite build --base=/stats-app/",
     "preview": "vite preview"
   },
   "dependencies": {

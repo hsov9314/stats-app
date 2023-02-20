@@ -30,7 +30,7 @@ jobs:
     - name: install and build
       run: |
         yarn
-        yarn build
+        yarn build-ghp
       env:
         CI: true
 
