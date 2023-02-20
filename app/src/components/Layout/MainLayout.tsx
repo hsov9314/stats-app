@@ -7,14 +7,16 @@ type Props = {
 
 export const MainLayout: React.FC<Props> = ({ children }: Props) => {
   return (
-    <div className="flex flex-row h-screen bg-slate-100">
-      <SideBar />
-      <div className="flex flex-col w-full px-4 py-6">
-        <div className="mb-10">
-          <Header title="概要" />
+    <>
+      <div className="flex flex-row bg-slate-100">
+        <SideBar />
+        <div className="flex flex-col w-full px-4 pt-6 ml-60">
+          <div className="mb-4">
+            <Header title="概要" />
+          </div>
+          <div className="flex flex-col w-full">{children}</div>
         </div>
-        <div className="flex flex-col w-full h-full">{children}</div>
       </div>
-    </div>
+    </>
   )
 }
