@@ -8,5 +8,6 @@ export default defineConfig({
     watch: {
       usePolling: true
     }
-  }
+  },
+  base: process.env.GITHUB_PAGES ? 'stats-app/' : './'
 })
