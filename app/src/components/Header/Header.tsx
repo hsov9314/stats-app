@@ -4,7 +4,7 @@ type Props = {
 
 export const Header: React.FC<Props> = ({ title }) => {
   return (
-    <div className="flex w-full mb-10">
+    <div className="flex w-full">
       <div className="w-3/4">
         <p className="text-2xl font-bold text-black-500">{title}</p>
       </div>
