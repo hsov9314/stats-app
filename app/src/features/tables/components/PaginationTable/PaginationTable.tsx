@@ -14,8 +14,7 @@ export const PaginationTable: React.FC = () => {
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    debugTable: true
+    getPaginationRowModel: getPaginationRowModel()
   })
 
   return (
@@ -27,7 +26,7 @@ export const PaginationTable: React.FC = () => {
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
                 return (
-                  <th key={header.id} colSpan={header.colSpan}>
+                  <th className="border" key={header.id} colSpan={header.colSpan}>
                     {header.isPlaceholder ? null : (
                       <div>{flexRender(header.column.columnDef.header, header.getContext())}</div>
                     )}
@@ -43,7 +42,7 @@ export const PaginationTable: React.FC = () => {
               <tr key={row.id}>
                 {row.getVisibleCells().map((cell) => {
                   return (
-                    <td key={cell.id}>
+                    <td className="border" key={cell.id}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </td>
                   )

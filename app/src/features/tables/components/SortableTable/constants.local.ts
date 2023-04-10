@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker'
-import { createColumnHelper } from '@tanstack/react-table'
+import { createColumnHelper, sortingFns } from '@tanstack/react-table'
 
 export type Person = {
   name: string
@@ -42,16 +42,19 @@ export const useColumns = () => {
   const columns = [
     columnHelper.accessor('name', {
       cell: (info) => info.getValue(),
-      footer: (info) => info.column.id
+      footer: (info) => info.column.id,
+      sortingFn: 'text'
     }),
     columnHelper.accessor('age', {
       header: () => 'Age',
       cell: (info) => info.renderValue(),
-      footer: (info) => info.column.id
+      footer: (info) => info.column.id,
+      sortingFn: 'alphanumeric'
     }),
     columnHelper.accessor('progress', {
       header: 'Profile Progress',
-      footer: (info) => info.column.id
+      footer: (info) => info.column.id,
+      sortingFn: 'alphanumeric'
     })
   ]
 
